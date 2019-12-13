@@ -9,4 +9,6 @@ server.use(express.json());
 
 server.use('/api/projects', projectRouter)
 
+server.get('/', (req, res) => res.json({ message: 'API is online' }));
+
 module.exports = server;

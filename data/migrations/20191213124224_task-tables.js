@@ -9,7 +9,7 @@ exports.up = function (knex) {
             // creates a string field called `task_notes`
             table.string('task_notes', 2500)
             // creates a boolean that indicates if the task has been completed. Defaults to 'false'
-            table.boolean(false)
+            table.boolean('completed').notNullable().defaultTo(false)
         })
 };
 
