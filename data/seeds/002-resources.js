@@ -5,10 +5,10 @@ exports.seed = function (knex) {
     .then(function () {
       // Inserts seed entries
       return knex('resources').insert([
-        { resource_name: 'Myself', resource_desc: 'Some tasks only need me' },
-        { resource_name: 'Hammer', resource_desc: 'Some tasks need a hammer' },
-        { resource_name: 'T.L.C.', resource_desc: 'Some tasks just need a little tender, loving care' },
-        { resource_name: 'Bottle of Whisky', resource_desc: 'Some tasks need a bottle of sipping whisky' }
+        { resource_id: 1, resource_name: 'Myself', resource_desc: 'Some tasks only need me', project_id: 1 },
+        { resource_id: 2, resource_name: 'Hammer', resource_desc: 'Some tasks need a hammer', project_id: 2 },
+        { resource_id: 3, resource_name: 'T.L.C.', resource_desc: 'Some tasks just need a little tender, loving care', project_id: 1 },
+        { resource_id: 4, resource_name: 'Bottle of Whisky', resource_desc: 'Some tasks need a bottle of sipping whisky', project_id: 2 }
       ]);
     });
 };
