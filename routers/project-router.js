@@ -67,16 +67,16 @@ router.get('/:id/tasks', (req, res) => {
       res
         .status(200)
         .json(task.map(newTask => {
-            if (newTask.completed === 0) {
-                return {
-                    ...newTask,
-                    completed: false
-                }
-            } else {
-                return {
-                    ...newTask,
-                    completed: true
-                }
+          if (newTask.completed === 0) {
+            return {
+              ...newTask,
+              completed: false
+            }
+          } else {
+              return {
+                ...newTask,
+                completed: true
+              }
             }
         }))
     })
